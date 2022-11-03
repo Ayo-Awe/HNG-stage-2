@@ -1,30 +1,39 @@
-# HNG Task one
+# HNG Task Two
 
 ## Description
 
-This repo contains the code for HNG stage one task.
+This repo contains the code for HNG stage two task.
 
 ## Task Description
 
-- Setup a server (Host)
-- Create an **(GET)** api endoint that returns the following json response:
+Using the same server setup from stage one
 
-  ```json
-  {
-    "slackUsername": "String",
-    "backend": "Boolean",
-    "age": "Integer",
-    "bio": "String"
-  }
-  ```
+- Create an (POST) api endoint that takes the following sample json:
 
-  - SlackUsername should be a **string** datatype and your slack username
-  - Backend should be a **boolean** datatype
-  - Age should be an  **integer** datatype
-  - Bio(description about yourself) should be a **string** datatype
+```json
+{ “operation_type”: Enum <addition | subtraction | multiplication> , “x”: Integer, “y”: Integer }
+```
 
-- Push to **GitHub**
+Operation can either be addition, subtraction or mutiplication
+
+x can be a number and Integer datatype
+
+y can be a number and Integer datatype
+
+Based on the operation sent, perform a simple arithmetic operation on x and y
+
+- Return a response with the result of the operation and your slack username
+
+```json
+{ “slackUsername”: String, “result”: Integer }
+```
+
+- Push to GitHub
+
+```json
+Sample Input { “operation_type”: Enum <addition | subtraction | multiplication> , “x”: Integer, “y”: Integer }
+```
 
 ## Deployment
 
-This task is currently live [here](https://hng-task-one.onrender.com)
+This task is currently live [here](https://hng-stage-2.onrender.com)
