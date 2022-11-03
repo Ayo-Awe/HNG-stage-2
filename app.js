@@ -4,6 +4,7 @@ const cors = require("cors");
 const { handlePost } = require("./controller");
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: "*",
