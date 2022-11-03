@@ -15,8 +15,8 @@ app.post("/", (req, res) => {
 
   // Create input validation schema
   const schema = Joi.object({
-    x: Joi.number().required,
-    y: Joi.number().required,
+    x: Joi.number().required(),
+    y: Joi.number().required(),
     operation_type: Joi.string().required(),
   });
 
