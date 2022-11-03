@@ -4,6 +4,8 @@ const Joi = require("joi");
 function handlePost(req, res) {
   const { x, y, operation_type } = req.body;
 
+  console.log(req.body);
+
   // Define input validation schema
   const schema = Joi.object({
     x: Joi.number().required(),
