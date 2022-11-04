@@ -12,7 +12,7 @@ app.use(
 );
 
 // Post route for task
-app.post("/", handlePost);
+app.post("/stage2", handlePost);
 
 const port = process.env.PORT || 8001;
 
