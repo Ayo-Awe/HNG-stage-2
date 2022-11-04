@@ -6,20 +6,21 @@ function handlePost(req, res) {
 
   console.log(req.body);
 
-  // Define input validation schema
-  const schema = Joi.object({
-    x: Joi.number().required(),
-    y: Joi.number().required(),
-    operation_type: Joi.string().required(),
-  });
+  // // Define input validation schema
+  // const schema = Joi.object({
+  //   x: Joi.number().required(),
+  //   y: Joi.number().required(),
+  //   operation_type: Joi.string().required(),
+  // });
 
-  // Validate input
-  const { error } = schema.validate({ x, y, operation_type });
+  // // Validate input
+  // const { error } = schema.validate({ x, y, operation_type });
 
-  if (error) return res.status(400).json({ error: error.details[0].message });
+  // if (error) return res.status(400).json({ error: error.details[0].message });
 
   // Perform arithemetic operation on input
   const result = handleOperator(operation_type, x, y);
+  console.log(result);
 
   res.status(200).json({ result, slackUsername: "aweayo", operation_type });
 }
