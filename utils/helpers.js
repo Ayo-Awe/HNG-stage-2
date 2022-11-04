@@ -7,7 +7,7 @@ function handleOperator(operator_type, x, y) {
     case operators.MULTIPLICATION:
       return x * y;
     default:
-      return null;
+      return x + y;
   }
 }
 
